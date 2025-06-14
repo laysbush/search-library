@@ -1,0 +1,37 @@
+<div class="table-sort-container">
+  <div class="table-sort">
+    <div class="header-row">
+      <div class="header-row-name" (click)="sortByAddress('adr')">
+        <div class="header-row-name__title">Адресс</div>
+        <mat-icon>arrow_downward</mat-icon>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="header-row-name" (click)="sortByAddress('gate')">
+        <div class="header-row-name__title">Шлюз</div>
+        <mat-icon>arrow_downward</mat-icon>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="header-row-name">
+        <div class="header-row-name__title" (click)="sortByAddress('interface')">Интерфейс</div>
+        <mat-icon>arrow_downward</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="table">
+    @for (route of routes$ | async; track route.uuid) {
+      <div class="info-table">
+        <div class="info-table__info-table-item">
+          <div class="row">{{ route.address }}</div>
+        </div>
+        <div class="info-table__info-table-item">
+          <div class="row">{{ route.gateway }}</div>
+        </div>
+        <div class="info-table__info-table-item">
+          <div class="row">{{ route.interface }}</div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
