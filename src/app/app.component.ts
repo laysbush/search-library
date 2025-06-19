@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {TableSortComponent} from './components/table-sort/table-sort';
+import {TableSortComponent} from './components/table-sort/table-sort.component';
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,4 @@ import {TableSortComponent} from './components/table-sort/table-sort';
   styleUrl: './app.component.scss',
   standalone: true
 })
-export class AppComponent {
-
-}
+export class AppComponent {}
