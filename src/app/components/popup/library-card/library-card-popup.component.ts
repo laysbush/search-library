@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface LibraryCard {
     name: string;
@@ -14,7 +14,7 @@ export interface LibraryCard {
 })
 export class LibraryCardPopupComponent {
     public libraryCard: LibraryCard;
-    constructor(private _dialogRef: MatDialogRef<LibraryCardPopupComponent>, @Inject(MAT_DIALOG_DATA) public data: LibraryCard) {
+    constructor(@Inject(MAT_DIALOG_DATA) public data: LibraryCard) {
         this.libraryCard = this.data;
       }
 }
